@@ -1,0 +1,8 @@
+Write a python to solve simple linear regression problem: 
+1. following CRISP-DM steps.
+2. allow user to modify a in ax+b, noise, number of points.
+3. use flask to deployment a website frame. 
+
+-
+
+Please give me the directory structure of this project.

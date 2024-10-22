@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Selection Comparison</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feature Selection Comparison</h1>
+    <h2>RMSE vs Number of Features</h2>
+    <img src="{{ url_for('static', filename='rmse_plot.png') }}" alt="RMSE Plot">
+    
+    <h2>Recursive Feature Elimination (RFE) Features Table with RMSE and R2</h2>
+    <table>
+        <tr>
+            <th>Number of Features</th>
+            <th>Most Important Features</th>
+            <th>RMSE</th>
+            <th>R²</th>
+        </tr>
+        {% for result in results_rfe %}
+        <tr>
+            <td>{{ result[0] }}</td>
+            <td>{{ result[1]|join(', ') }}</td>
+            <td>{{ result[2]|round(4) }}</td>
+            <td>{{ result[3]|round(4) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Mutual Information Features Table with RMSE and R2</h2>
+    <table>
+        <tr>
+            <th>Number of Features</th>
+            <th>Most Important Features</th>
+            <th>RMSE</th>
+            <th>R²</th>
+        </tr>
+        {% for result in results_mift %}
+        <tr>
+            <td>{{ result[0] }}</td>
+            <td>{{ result[1]|join(', ') }}</td>
+            <td>{{ result[2]|round(4) }}</td>
+            <td>{{ result[3]|round(4) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>SelectKBest Features Table with RMSE and R2</h2>
+    <table>
+        <tr>
+            <th>Number of Features</th>
+            <th>Most Important Features</th>
+            <th>RMSE</th>
+            <th>R²</th>
+        </tr>
+        {% for result in results_selectkbest %}
+        <tr>
+            <td>{{ result[0] }}</td>
+            <td>{{ result[1]|join(', ') }}</td>
+            <td>{{ result[2]|round(4) }}</td>
+            <td>{{ result[3]|round(4) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

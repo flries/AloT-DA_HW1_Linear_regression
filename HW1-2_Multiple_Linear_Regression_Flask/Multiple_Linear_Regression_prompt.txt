@@ -1,0 +1,56 @@
+Please predict the stock price using multiple linear regression, following CRISP-DM step.
+
+-
+
+Please list Top 5 feature selection scheme.
+
+-
+
+Write a python code to solve the multiple linear regression problem "Boston Housing" using Scikit-Learn and following the CRISP-DM methodology,
+Follow the steps below:
+1. Business Understanding
+Step 0: The goal is to analyze the data and determine the features and y accordingly.
+
+2. Data Understanding
+Step 1: Import the necessary libraries for data manipulation and model building.
+Step 2: Use Web crawler to download the dataset "BostonHousing.csv" from the URL"https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv". Convert the CSV content to a pandas DataFrame and print a summary of the dataset. Load the dataset and explore its contents.
+
+3. Data Preparation
+Step 3: Preprocess the data by separating the features(X) and the target variable(y). Split the data into training and testing sets using the train_test_split function with a test size of 20%.
+
+-
+
+4. Modeling.
+Step 4: Create a Lasso regression model and train it on the training data. Using the training data (X_train and Y_train) and list the MSE for best model using different number of variables. Make a table to list the result, and the name of variables.
+
+5. Evaluation.
+Step 5: Evaluate Model by R2 Score and MSE. Use Lasso linear regression for feature selection and model evaluation. Make predictions on the testing data (X_test) using the trained model. Calculate the mean squared error (MSE) between the predicted values and the actual target values (y_test) using the mean squared_error function from sklearn.metrics. Print the calculated MSE.
+
+Remake this code as version 1.
+
+-
+
+Use the other best feature selection techniques you think to do Step 4,5 again.
+Remake this code as version 2.
+
+-
+
+Use feature selection techniques MIFT(Mutual Information) and SelectKBest to do Step 4,5 again.
+Remake the MIFT code as version 3, the SelectKBest code as version 4.
+
+-
+
+6. Deployment:
+Use root mean square error(RMSE) instead of mean squared error (MSE) and combine above three Feature Selection Comparison "RFE", "MIFT" and "SelectKBest" code, remake this code as version 5.
+
+Use Flask web for implementation deployment, display three Feature Selection Comparison RFE, MIFT and new method SelectKBest:
+1. a graph showed the relations between numbers of features and RMSE with three line RFE, MIFT and SelectKBest.
+2. three Features table showed RFE, MIFT and SelectKBest result with RMSE and R2, the title of column is "Number of Features", "Most Important Features"(first row is "x1", x1 is the most important features, second row is "x1, x2",...,last row is"x1, x2, x3,..., x13"), ordered by importance), "RMSE" and "R2" of features.
+
+-
+
+Please change the graph name as "RMSE for Different Feature Selection Algorithms", and use the full name "Recursive Feature Elimination", "Mutual Information" and "SelectKBest" of three method to label the line of this graph.
+
+And change the three table name, first is "Recursive Feature Elimination (RFE) Features Table with RMSE and R2", second is "Mutual Information Features Table with RMSE and R2", and the last one is "SelectKBest Features Table with RMSE and R2". The values of column "RMSE" and "R2" round to the 4 decimal place.
+
+Give me revised code of "app.py" and "index.html".
