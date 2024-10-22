@@ -55,7 +55,7 @@ Build the multiple linear regression model.
 **Example Code (Python):**
 
 ```python
-python複製程式碼import pandas as pd
+import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -92,7 +92,7 @@ Evaluate the model’s performance using appropriate metrics.
 **Example Code for Evaluation:**
 
 ```python
-python複製程式碼from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score
 
 # Evaluate the model
 mse = mean_squared_error(y_test, predictions)
@@ -189,7 +189,7 @@ The objective is to analyze the Boston Housing dataset to predict the median val
 #### Step 1.1: Import Necessary Libraries
 
 ```python
-python複製程式碼import pandas as pd
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -201,7 +201,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 #### Step 1.2: Download and Load the Dataset
 
 ```python
-python複製程式碼# Load the dataset from the provided URL
+# Load the dataset from the provided URL
 url = "https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv"
 data = pd.read_csv(url)
 
@@ -219,7 +219,7 @@ print(data.head())
 Separate the features (X) and the target variable (y).
 
 ```python
-python複製程式碼# Identify the target variable and feature variables
+# Identify the target variable and feature variables
 target = 'medv'  # Median value of homes
 X = data.drop(columns=[target])  # Feature variables
 y = data[target]  # Target variable
@@ -232,7 +232,7 @@ print(f"Target shape: {y.shape}")
 #### Step 2.2: Split the Data into Training and Testing Sets
 
 ```python
-python複製程式碼# Split the data into training and testing sets (80% train, 20% test)
+# Split the data into training and testing sets (80% train, 20% test)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Display the shape of the training and testing sets
@@ -245,7 +245,7 @@ print(f"Testing set shape: {X_test.shape}, {y_test.shape}")
 Putting it all together, here's the complete code from steps 0 to 2:
 
 ```python
-python複製程式碼# Step 1: Import Necessary Libraries
+# Step 1: Import Necessary Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -303,7 +303,7 @@ Certainly! Below is the modified code for Steps 4 and 5 in the CRISP-DM process,
 ### Full Code (Version 1)
 
 ```python
-python複製程式碼# Step 1: Import Necessary Libraries
+# Step 1: Import Necessary Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -420,7 +420,7 @@ Here’s the modified code to implement the Boston Housing problem using RFE for
 ### Full Code (Version 2)
 
 ```python
-python複製程式碼# Step 1: Import Necessary Libraries
+# Step 1: Import Necessary Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -537,7 +537,7 @@ Certainly! Below are the implementations for Step 4 and Step 5 using **Mutual In
 ### Full Code (Version 3: Using Mutual Information for Feature Selection)
 
 ```python
-python複製程式碼# Step 1: Import Necessary Libraries
+# Step 1: Import Necessary Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -611,7 +611,7 @@ print(f"R² Score: {r2:.2f}")
 ### Full Code (Version 4: Using SelectKBest for Feature Selection)
 
 ```python
-python複製程式碼# Step 1: Import Necessary Libraries
+# Step 1: Import Necessary Libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -722,7 +722,7 @@ Here’s how to do it step-by-step:
 First, we’ll create a single Python script that implements all three feature selection methods and calculates RMSE and R² for varying numbers of features.
 
 ```python
-python複製程式碼# app.py
+# app.py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -828,7 +828,7 @@ Create a directory named `templates` and add a file called `index.html` for the 
 #### `index.html`
 
 ```html
-html複製程式碼<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -920,7 +920,7 @@ html複製程式碼<!DOCTYPE html>
 Ensure that you have the following directory structure:
 
 ```arduino
-arduino複製程式碼/your-project-directory
+/your-project-directory
 │
 ├── app.py
 ├── requirements.txt
@@ -935,7 +935,7 @@ arduino複製程式碼/your-project-directory
 Create a `requirements.txt` file with the following content to include the necessary libraries:
 
 ```
-複製程式碼Flask
+Flask
 pandas
 numpy
 matplotlib
@@ -945,7 +945,7 @@ scikit-learn
 You can install the required libraries by running:
 
 ```bash
-bash複製程式碼pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Step 5: Run the Flask Application
@@ -953,7 +953,7 @@ bash複製程式碼pip install -r requirements.txt
 To run the Flask application, execute the following command in your terminal:
 
 ```bash
-bash複製程式碼python app.py
+python app.py
 ```
 
 This will start the Flask development server. Open your web browser and go to `http://127.0.0.1:5000/` to see the feature selection comparison and the corresponding RMSE graph.
@@ -976,7 +976,7 @@ Sure! Below are the revised versions of `app.py` and `index.html` with your requ
 ### Revised `app.py`
 
 ```python
-python複製程式碼# app.py
+# app.py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -1078,7 +1078,7 @@ if __name__ == '__main__':
 ### Revised `index.html`
 
 ```html
-html複製程式碼<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1180,7 +1180,7 @@ html複製程式碼<!DOCTYPE html>
 You can run the Flask application as before by executing the following command in your terminal:
 
 ```bash
-bash複製程式碼python app.py
+python app.py
 ```
 
 Then open your browser and navigate to `http://127.0.0.1:5000/` to see the updated results.
