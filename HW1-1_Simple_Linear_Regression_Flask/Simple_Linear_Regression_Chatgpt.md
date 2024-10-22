@@ -35,7 +35,7 @@ Here's a Python implementation for solving a simple linear regression problem fo
 1. **Linear Regression Model using `scikit-learn`:**
 
 ```python
-python複製程式碼# Import necessary libraries
+# Import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
@@ -82,7 +82,7 @@ plot_regression(X, y, y_pred, 3, 4, mse)
 Here’s the Flask app that allows users to specify the values for `a`, `b`, noise, and number of points.
 
 ```python
-python複製程式碼from flask import Flask, render_template, request
+from flask import Flask, render_template, request
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
@@ -155,7 +155,7 @@ if __name__ == '__main__':
 You'll need an HTML file to create the user input form and display the plot.
 
 ```html
-html複製程式碼<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -198,11 +198,11 @@ html複製程式碼<!DOCTYPE html>
 1. Save the Python script and HTML template.
 2. Install the required packages:
    ```bash
-   bash複製程式碼pip install flask scikit-learn numpy matplotlib
+   pip install flask scikit-learn numpy matplotlib
    ```
 3. Run the Flask app:
    ```bash
-   bash複製程式碼python app.py
+   python app.py
    ```
 4. Open your browser at `http://127.0.0.1:5000/`.
 
@@ -215,7 +215,7 @@ Please give me the directory structure of this project.
 Here is the suggested directory structure for your Flask linear regression project:
 
 ```php
-php複製程式碼flask_linear_regression/
+flask_linear_regression/
 │
 ├── app.py                  # Main Flask application
 ├── templates/
@@ -253,7 +253,7 @@ php複製程式碼flask_linear_regression/
    * Contains a list of Python packages required for the project (e.g., Flask, scikit-learn, numpy, matplotlib).
    * You can generate this file by running:
      ```bash
-     bash複製程式碼pip freeze > requirements.txt
+     pip freeze > requirements.txt
      ```
 
 6. **`README.md`**:
@@ -265,26 +265,26 @@ php複製程式碼flask_linear_regression/
 1. **Create a Virtual Environment (Optional but Recommended):**
 
    ```bash
-   bash複製程式碼python -m venv venv
+   python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 2. **Install Required Packages:**
 
    ```bash
-   bash複製程式碼pip install flask scikit-learn numpy matplotlib
+   pip install flask scikit-learn numpy matplotlib
    ```
 
 3. **Generate `requirements.txt`:**
 
    ```bash
-   bash複製程式碼pip freeze > requirements.txt
+   pip freeze > requirements.txt
    ```
 
 4. **Run the Flask App:**
 
    ```bash
-   bash複製程式碼python app.py
+   python app.py
    ```
 
 Once you have this structure, you can easily extend the app or customize it further. Let me know if you'd like to modify or add features!
